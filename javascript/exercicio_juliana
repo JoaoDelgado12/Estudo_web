@@ -24,22 +24,37 @@ console.log(numeros);
 
 console.log("Exercicio 3");
 let posicao=0; //qual a posicao do primo 
-let number = 1; // os numeros a serem analizados
-while(posicao < 1001){
+let number = 0; // os numeros a serem analizados
+while(posicao < 1001 ){
     number++; // começa com dois
     let teste = 1; // indica se é primo (1) ou não (0)
     for(let i=1; i <= Math.sqrt(number); i++){ // não precisa analisar tudo, só até a sua raiz quadrada é o suficiente
-        if(number%i == 0){ // se conseguir dividir não é primo
+        if(number%i == 0 && i != 1){ // se conseguir dividir não é primo
             teste = 0;
             break;
         }
     }
     
-    if(teste){
+    if(teste && number != 1){
         posicao++; // se number for primo, acrescenta uma posição
     }
 }
 console.log(number);
 
-console.log("Exercicio 3");
+console.log("Exercicio 4");
+
+for(let j=2; j < 200; j++){
+    let teste = 1; // retorna a 1 como padrão a cada verificação de um numero
+    for(let i=1; i < Math.sqrt(j) + 1; i++){ 
+        if(j%i == 0 && i !=1 ){ // se conseguir dividir não é primo
+            teste = 0; // ele não é primo
+            break; // sai do for
+        }
+    }
+    
+    if(teste){
+        console.log(j); // se ele não foi divido, então é primo
+    } // se test = 0, então vai para o proximo
+}
+
 
