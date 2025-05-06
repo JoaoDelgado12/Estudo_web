@@ -57,4 +57,31 @@ for(let j=2; j < 200; j++){
     } // se test = 0, então vai para o proximo
 }
 
+console.log("Exercicio 5");
+
+let a =2 , b =8 , c= -24;
+console.log("vamos calculo o Delta");
+console.log("b^{2} :", b**2);
+console.log("4.a.c :", 4*a*c);
+console.log("Delta:", b**2 - 4*a*c);
+
+console.log("Exercicio 6");
+
+let desc = 0.2;
+let valor_compra = 1850;
+console.log("o valor com o desconto fica:", valor_compra*(1-desc));
+
+console.log("Exercicio 7");
+
+let aumento = 0.13;
+let salario = 3480;
+console.log("O novo salario de jose é:", salario*(1+aumento));
+
+console.log("Exercicio 8");
+let numero = 5;
+let fatorial = 1;
+for(let i= numero; i>0; i--){
+    fatorial *= i;
+}
+console.log(fatorial);
 
