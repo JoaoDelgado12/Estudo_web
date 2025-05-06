@@ -10,13 +10,36 @@ console.log(soma);
 console.log("Exercicio 2");
 let numeros = [5, 7, 1, 8, 9];
 
-for(let i=0; i < numeros.length; i++){
-  for(let j=0; j < numeros.length; j++){
-    if(numeros[i] >= numeros[j]){
-        let troca_numb = numeros[j];
-        numeros[j] = numeros[i];
-        numeros[i] = troca_numb;
+for (let i = 0; i < numeros.length; i++) { // no pior dos casos da ordenação, vamos precisar repetir o tamanho do vetor.
+  for (let j = 0; j < numeros.length - 1; j++) {
+    if (numeros[j] < numeros[j + 1]) { // verifica se os pares j e j+1, o valor de j é menor ou igual. Se for, troca.
+      let troca = numeros[j];
+      numeros[j] = numeros[j + 1];
+      numeros[j + 1] = troca;
     }
   }
 }
-console.log(numeros);
+console.log(numeros); 
+
+
+console.log("Exercicio 3");
+let posicao=0; //qual a posicao do primo 
+let number = 1; // os numeros a serem analizados
+while(posicao < 1001){
+    number++; // começa com dois
+    let teste = 1; // indica se é primo (1) ou não (0)
+    for(let i=1; i <= Math.sqrt(number); i++){ // não precisa analisar tudo, só até a sua raiz quadrada é o suficiente
+        if(number%i == 0){ // se conseguir dividir não é primo
+            teste = 0;
+            break;
+        }
+    }
+    
+    if(teste){
+        posicao++; // se number for primo, acrescenta uma posição
+    }
+}
+console.log(number);
+
+console.log("Exercicio 3");
+
