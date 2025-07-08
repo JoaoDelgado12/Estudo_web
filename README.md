@@ -1,2 +1,2 @@
-# Estudo_web
+# Estudo de Javascript
 Um repositório dos meus estudos sobre web, frontend....
